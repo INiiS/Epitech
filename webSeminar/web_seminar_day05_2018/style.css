@@ -1,0 +1,37 @@
+@font-face{
+	font-family: "Courier Prime";
+	src: url("Courier_Prime.ttf") format("truetype");
+}
+
+
+
+body{
+	font-family: "Courier Prime", cursive;
+	display:flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+main{
+	flex: 1 0 auto;
+}
+
+#header{
+	width:100%;
+}
+
+cite{
+	text-align: center;
+}
+
+blockquote{
+	font-style : italic;
+}
+
+
+
+footer.page-footer{
+	padding-bottom: 20px;
+}
+
+
+

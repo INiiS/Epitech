@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+<form>
+    <div class="form-group">
+        <label for="inputMail">Email</label>
+        <input type="email" class="form-control" id="inputMail" placeholder="Enter email :">
+    </div>
+    <input id="wat" type="submit" class="btn btn-outline-dark" >
+</form>
+<br/>
+<button id="bouton" type="button" class="btn btn-primary">Push me</button>
+</div>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script>
+    $(function () {
+        
+        $("#wat").on("click", function (event) {
+            event.preventDefault();
+
+		$.post("ex03.php",  {"email" : $("#inputMail").val()})
+            .fail(function () {
+                alert("Erreur: mail non valide.");
+            }).done(function (data) {
+                $("button").after("<div class='alert alert-success'>" + data + "</div>");
+            })
+        });
+
+         $("#bouton").on("click", function () {
+        
+             $.ajax({
+                 headers: {
+                     'Content-Type': 'application/json'
+                 },
+        
+                 method: "GET",
+                 url: "ex02.php",
+                 dataType: "json"
+             })
+                 .done(function (data) {
+        
+        
+                     $("button").after("<div class='alert alert-success' data-dismiss='alert'>Hello " + data['name'] + "</div>");
+                 })
+                 .fail(function () {
+                     $("button").after("<div class='alert alert-danger' data-dismiss='alert'> Erreur AJAX </div>");
+                 })
+                 .always(function () {
+                     $("button").after("<div class='alert alert-info' data-dismiss='alert'>Fin exec AJAX</div>");
+                 })
+         })
+    });
+</script>
+</body>
+</html>

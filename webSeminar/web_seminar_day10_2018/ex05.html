@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <button class="btn btn-primary">Load countries </button>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Country Code</th>
+        <th scope="col">Name</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+
+</table>
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $("button").on("click",function () {
+            $(this).prop("disabled","true");
+            var countries = "";
+            $.getJSON("countries.json", function (data) {
+                $.each(data, function (key, val) {
+                    countries +="<tr><td>" + key + "</td><td>" + val + "</td></tr>";
+
+                });
+                $("tbody").append(countries);
+            })
+        })
+    })
+</script>
+</body>
+</html>

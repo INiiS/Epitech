@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title> Epitech - Web Seminar </title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="codingpedia.css">
+
+	<body>
+		<header>
+			<h1>Welcome to CodingPedia</h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Index </a>
+				</li>
+				<li><a href="php.html">PHP</a>
+				</li>
+				<li><a href="sql.html">SQL</a>
+				</li>
+			</ul>
+		</nav>
+		
+		</header>
+				<main>
+<aside>
+			<p>
+		I'm Sebastien Sattler, PGT3 student at Epitech, I'm 26 years old, NOT single. As many of my friends, I'm very into videogames, movies, series, as well as what's called "otaku culture", that means japanese animation and mangas. I also like to inform myself about general Japanese culture, and history. I think of myself as somewhat curious, some may say I'm quite shy at the beginning. But don't worry, it gets better with time.
+			</p>
+		</aside>
+			<section>
+				<article>
+			<p>
+		CodingPedia is a collective encyclopedia project on the Internet aiming to be universal and multi-lingual which functions as a wiki. <br/> CodingPedia has for goal to offer freely reusable
+			</p>
+				<form>
+					<h2>Formulaire de questionnement : </h2>
+					
+					<div><label for="name">Name : </label>
+							<input type="text" name="name" id="name" placeholder="Name" required /></div>
+						
+					<div><label for="firstname">First Name : </label>
+						<input type="text" name="firstname" id="name" placeholder="First Name" required /></div>
+						
+						
+					<div><label for="email">Email : </label>
+						<input type="email" name="email" id="email" placeholder="Email" required /></div>
+						
+						
+					<div><label for="age">Age : </label>
+						<input type="number" name="age" id="age" min="3" max="99"/></div>
+					<div><label for="tel">Phone : </label>
+						<input type="tel" name="tel" id="tel" placeholder="0123456789" pattern="0[1-9][0-9]{8}" required /></div>
+					<div><label>Sex :</label> 	
+					<label for="M">Male: </label>
+					<input type="radio" name="sex" id="M" checked />
+					<label for="F">Female : </label>
+					<input type="radio" name="sex" id="F"/></div>
+					<div><label for="haircolor"> Hair Color : </label>
+						<input type="color" name="haircolor" id="haircolor"/></div>
+					<div><label for="datepicker"> Date : </label>	
+						<input type="date" id="datepicker" required /></div>
+					<div><label for="tech">Technology : </label>
+							<select name="tech" id="tech">
+						<option value="SQL">SQL</option>
+						<option value="PHP">PHP</option>
+							</select></div>
+							<div><label for="question">Question : </label>
+								<textarea name="question" id="question" required></textarea></div>
+						<input type="submit" value="Submit">
+
+					
+				</form>
+			</article>
+			<article>
+				<h2>Generic subjects to review</h2>
+				<ol>
+					<li>
+						Dates. (using Date(), ISOString, substr, split, etc.).
+					</li>
+				</ol>
+			</article>
+			</section>
+			</main>
+		</aside>
+		<div class="container">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla finibus volutpat pharetra. Ut interdum sapien non commodo pellentesque. Morbi sit amet ipsum sagittis, sollicitudin augue in, eleifend mauris. Pellentesque accumsan hendrerit laoreet. Vestibulum malesuada orci ac risus viverra, porta convallis nibh consectetur. Mauris sed porta enim. Duis at mauris et est lacinia dignissim. Curabitur convallis diam et mauris convallis, sed volutpat nunc lacinia. Integer vitae commodo massa. </p>
+			
+		</div>
+		<footer>
+			<address>
+				Sattler - Sebastien - 2r de Dachstein - 0678106890
+			</address>
+		</footer>
+	<script>
+		//On récup la date du jour, on la formate en format ISO 8601, puis on retire tout après le T(tout ce qui concerne les timezones
+		document.getElementById('datepicker').value = new Date().toISOString().split('T')[0];
+	</script>
+	</body>
+</html>

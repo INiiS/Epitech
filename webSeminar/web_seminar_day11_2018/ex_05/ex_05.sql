@@ -1,0 +1,3 @@
+USE coding;
+
+SELECT UPPER(name) AS 'NAMES OF ALL THE GENRES' FROM genres;

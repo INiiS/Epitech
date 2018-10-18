@@ -1,0 +1,155 @@
+html{
+	box-sizing:border-box;
+}
+
+
+
+header{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border: 1px solid black;
+	margin-bottom: 10px;
+}
+
+main{
+	display:flex;
+	flex-direction: row-reverse;
+}
+
+	
+nav{
+	border: 1px solid black;
+	margin: 1vh 1vh 1vh 1vh;
+
+}
+
+nav li{
+	display: inline;
+	padding-right: 10px;
+}
+
+nav li a:hover{
+	background-color: lightblue;
+}
+
+nav ul {
+	border: 1px solid black;
+	padding:0;
+}
+
+
+
+
+section{
+	border: 1px solid black;
+	width: 85%;
+	margin-left: 10px;
+	margin-bottom: 10%;
+	
+
+}
+
+ aside{
+	border: 1px solid black;
+	max-width: 15vw;
+	align-self: start;
+	margin-left: 1vw;
+	margin-right: 1vw;	
+
+}
+
+footer{
+  
+  text-align: center;
+  margin-top: 5vh;
+}
+
+div{
+	margin-top: 1vh;
+	display:flex;
+	justify-content: start;
+}
+
+label{
+	display: inline-block;
+	text-align: left;
+	margin-top: 1vh;
+	margin-left: 1vw;
+	width: 10vw;	
+}
+
+select, input{
+	width: 70vw;
+	margin-right: 1vw;
+}
+
+input[type="radio"]{
+	width: 1vw;
+}
+
+input[type="submit"]{
+	margin-top:1vh;
+	width: 20vw;
+	margin-left: 45vw;
+}
+
+p, h2{
+	margin-left: 1vw;
+}
+
+
+article{
+	display:block;
+	position: relative;
+	border: 1px solid black;
+	margin: 1vh 1vw 1vh 1vw;
+	
+}
+
+textarea{
+
+	width: 70%;
+
+}
+
+
+.container{
+	padding-left: 20px;
+	padding-right: 20px;
+	width: auto;		
+}
+
+.container p:first-letter {
+	background-color:grey;
+	font-size: 24px;
+	color: white;
+
+}
+
+
+@media screen and (max-device-height: 720px)
+{
+	body, h2{
+		font-size: small;
+	}
+
+	footer{
+		margin-top: 3vh;
+	}
+
+}
+
+@media screen and (max-device-width : 400px){
+	body, h2{
+		font-size: x-small;
+	}
+
+	label{
+		display:inline;
+	}
+
+	div{
+		display:block;
+
+}

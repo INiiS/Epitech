@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+tr [loneytusarfpdhikzbcgjmqvwx] [a-z] | tr [LONEYTUSARFPDHIKZBCGJMQVWX] [A-Z]

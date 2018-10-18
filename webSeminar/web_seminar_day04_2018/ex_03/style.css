@@ -1,0 +1,49 @@
+
+header{
+	background-color: lightblue;
+	position: sticky;
+	top: 0px;
+}
+
+footer{
+	background-color: tomato;
+	position: sticky;
+	bottom: 0px;
+}
+
+
+body{
+	display:flex;
+	flex-direction: column;
+}
+
+main{
+	flex-grow: 1;
+}
+
+section:first-of-type{
+	background-color: lightgreen;
+	height: 20vh;
+
+}
+
+article{
+	background-color: khaki;
+	height: 30vh;
+}
+
+
+
+
+
+ul{
+	display:flex;
+	flex: space-around;
+}
+
+li {
+	list-style: none;
+	padding: 1vw;
+}
+
+
